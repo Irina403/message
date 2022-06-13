@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+		<script src="https://rawgit.com/jonathantneal/svg4everybody/master/dist/svg4everybody.js"></script>
+		<script>svg4everybody();</script>
+		<title>SVG &lt;symbol&gt; sprite preview | svg-sprite</title>
+		<style>@charset "UTF-8";body{padding:0;margin:0;color:#666;background:#fafafa;font-family:Arial,Helvetica,sans-serif;font-size:1em;line-height:1.4}header{display:block;padding:3em 3em 2em 3em;background-color:#fff}header p{margin:2em 0 0 0}section{border-top:1px solid #eee;padding:2em 3em 0 3em}section ul{margin:0;padding:0}section li{display:inline;display:inline-block;background-color:#fff;position:relative;margin:0 2em 2em 0;vertical-align:top;border:1px solid #ccc;padding:1em 1em 3em 1em;cursor:default}.icon-box{margin:0;width:144px;height:144px;position:relative;background:#ccc url("data:image/gif;base64,R0lGODlhDAAMAIAAAMzMzP///yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjEgNjQuMTQwOTQ5LCAyMDEwLzEyLzA3LTEwOjU3OjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgV2luZG93cyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozQjk4OTI0MUY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozQjk4OTI0MkY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjNCOTg5MjNGRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjNCOTg5MjQwRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAAAAAAAsAAAAAAwADAAAAhaEH6mHmmzcgzJAUG/NVGrfOZ8YLlABADs=") top left repeat;border:1px solid #ccc;display:table-cell;vertical-align:middle;text-align:center}.icon{display:inline;display:inline-block}h1{margin-top:0}h2{margin:0;padding:0;font-size:1em;font-weight:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;position:absolute;left:1em;right:1em;bottom:1em}footer{display:block;margin:0;padding:0 3em 3em 3em}footer p{margin:0;font-size:.7em}footer a{color:#0f7595;margin-left:0}</style>
+
+<!--
+
+Sprite shape dimensions
+====================================================================================================
+You will need to set the sprite shape dimensions via CSS when you use them as inline SVG, otherwise
+they would become a huge 100% in size. You may use the following dimension classes for doing so.
+They might well be outsourced to an external stylesheet of course.
+
+-->
+
+<style type="text/css">
+	.svg-arrow-dims { width: 9px; height: 16px; }
+	.svg-icon1-dims { width: 56px; height: 75px; }
+	.svg-icon2-dims { width: 72px; height: 72px; }
+	.svg-icon3-dims { width: 70px; height: 72px; }
+	.svg-icon4-dims { width: 68px; height: 68px; }
+	.svg-play-icon-dims { width: 84px; height: 84px; }
+</style>
+<!--
+====================================================================================================
+-->
+
+	</head>
+	<body>
+
+<!--
+
+Inline <symbol> SVG sprite
+====================================================================================================
+This is an inlined version of the generated SVG sprite. The single images may be <use>d everywhere
+below within this document. Please see
+
+	https://github.com/svg-sprite/svg-sprite/blob/1.5.x/docs/configuration.md#defs--symbol-mode
+
+for further details on how to create this embeddable sprite variant.
+
+-->
+
+<svg width="0" height="0" style="position:absolute">
+		<symbol viewBox="0 0 9 16" id="arrow" xmlns="http://www.w3.org/2000/svg"><path d="M2.29 15.077L8.486 8.88a1.24 1.24 0 000-1.748L2.29.936A1.238 1.238 0 00.542 2.683L5.86 8 .542 13.33a1.239 1.239 0 000 1.747 1.24 1.24 0 001.748 0z"/></symbol>
+		<symbol viewBox="0 0 56 75" id="icon1" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h56v75H0z"/><defs><pattern id="bpattern0" patternContentUnits="objectBoundingBox" width="1" height="1"><use xlink:href="#bimage0_1339_23" transform="scale(.01786 .01333)"/></pattern><image id="bimage0_1339_23" width="56" height="75" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAABLCAYAAAAlMERxAAAIaElEQVR4nM2ce4xfRRXHP2db7Gu3D7dIAfuOJPIQJUAq+kdlW1oprbSAUCgCiiVBKTaCQjVRE6smFkNRQ2t8EFnUqMFCk0ZTpdKk3ZQ2TSlVI4ZKgaqVICKUPmHMdM8NZ+/M3d9vfzM/9vdNJnt/Z87MvXPPmTPnnJm74pYITcQpwPXAHOADQKfe6j/ATuB3wIPAgWY9grglbQExA0YCXwVuA4bX6O4w8F3ga8DBoDZ5gNdlH+A0YD1wZlADR/TvsKAG/gwsAJ4JahLQBl5Fs5XJIJtBzjR9PgFyI8gEkOFa/PUNINsMn2/zOMiUnM8k7tohuV7WO4Ae4Dz9fQhYCjwEuIC7F/4prgPWqlp7PAlcCBwNuBtATgneDnKeXh8GmQXS7WdBhLcoTnlmaRtPOxfkjghvgxJcfFKOFzUCeN5YyWVqOAaCz5o2LwETVQtaQoKXgXTq9TMg90d4apU1IH9THt/Xghr8dZW2E7Mjvcw2fTyI43gDffo23eZ3V4RnwGUoLstCb5eEPwa19cO2PSvHgw3tFWUyxpkO/pHQmW37zqC2AeSS4DFzPSKorR/W68myTOQa4AvAuXp9BrA74KgPZxiu/TkerMqKDgMZEqFXlR2GnmL9bNsnIvVVxU+1kbG6thMS7C0TcHIfTp7DyWGcHMXJLpzciZN2wxcr6wztapxMifDUKpNxco3hebQG/0icLNdnPIKTgzh5ESdrcTKp4BN3RYeX5AfVQe4MZNyLfwJfqOF2bQEu0usNwGX98JYhev95St8GzAi43sI1wLeBdwc1vfgfsBB4TNyi0ROAPaXBvQKM6rWyffAYcDPw96DL3pe0hbfM8g+AW4E3As6+8M7w94FblOpfyoeBrQEnTFW/dXaJflwHZS2vH8M5XkXvxkmninQ/Ti7GyVhVyxtwss+oha97CiefiKhMD05Wmt9LcbIZJxdEeItyvvLcYmi+j60R3pv03rMN7QWc3IyTDh2Dv9derRuDkxXiFo7dB0zSUXeplCy82V8B3FWS6E+BzwCvGZqX3hqNIiy2a/S+T2mTNcq/oMT3Q21rVXucSu2qksRWAV+PBMkzNKrx2C/u8nFFZ4dMyBLD2cDPvNhN3Z+A+SWV9YP8PLBSQ6h64Ne8LwH3lAb3fuA3wBRD261pkP6WooPFWLyKHlKRjsDJaRHVKMoenFyIkzWGdhZOtuNkpqE5nKzCydk46VZrHOsPrXtIeVdp26LuelVVa5Hv1WfYHemrKBPVwvrrg+IWdHrVuURH7iW0pA7rdzXwE+O1HNMQaU3ACWOAj6g03qW0fwO7gE1qDCxOUkneZmgv63NtCHrvC689vwYWKXWDuPknzwI2GrbfAjfWkenykfs6jdsK/BhYrhatEbwHeMAsN2iE7x94b43+xmuGbq6hzfQq+nucrDYinouTnWrhYipQlJ2qLj2G9kmcPImTK3HSFmlTVbzFXqFtLzI83fp7b0W7oszQBX+uod2Dk8fFzfOpyxOiXamWsljHvNH5FPDz4F31hc+Q3Q/cVKI/pxLeppmyA0Ydx2nO9L3+LQOXAx2m7VF1LFYHdwvhMwHfUdVGp9e31Gg5cfMm2Bb+Zr8ETja0bwBfrmNeeu/ivlLbRrBTX+yuGm29I7JWk1YF/NxebJc6cZeeWm7oTfIjwPsM7RGd5K+VmUvwUvicrmVVblQVdqhx8S/4zQqeAn6uPqxLV4EeXSv7RCHiPnp60BpoB7qBjxnabv39bMAdok1TfzM1jJqkrmAR7/kE8L+0rx3qBDwd9BLHQjVEo02tT1bdEYshxc2tfNGinsIKQ3sRuBLYHHA3H95n/SZwp7nT68CndXmLQtyciTG6hdfpH5XWvFvVrXq74A3SL1QjCniJL1JvqhLiLplUVWdxvs7D0wxttbpktaKFVPg18Velez+sa/WrtfoWN3tKQKzAqTpI6yBvVK/m5XiTZCxTp7pYAt7Qpazss1ZC3KypVXUxDFd1vdbUPa27Qn+N8DeKdo0nF5v2B3QpGlBaUlzXtIBYB+7S9bFwCl5R67Ypw+CmA4+Wcq1bdQkYcEpS3MXTA2KdmK/Wq13Z95XCmkbhneUrTNt71as51kh/Q3ENb4Cu1+Byj/4eG3A0hvGm1e3qHTWM1Lxovya6QVhJ9RfU1oXUAca2olORdZ8+RUUppelr+Y+DglypexKC3P7Q3k9dXcg5wFywu7rlvOyAkaqizThkcySgJCBVgqMDSoshp4rWdHwbwJjUDnIOMFdUUc6UJyF1DjYDx3P2mSrBjoCSF8nHsFIHaB/gcFCbjuQXmHMO5hrgfwNKAt7OOThdN083RrbomoZUCdY67GrxgO7cLtcUYj1Odb3bb5VIPQhkB1hrmSjSd8M0+101QNtPf/uVdaEVF/qsDkMrOttZkWpksh0XrsCgq2gzFnobTWQwMq03B5NP+Vq0orOdFbnOizYLg+6qNSPgfd1cD7qzbU1wLl802MRMQSs62xY5At6WnoMZUhb5fNFcyJpfzRlN5FomsmbIWz2rliHx23rroN2aHvTUfTOc7fLpwyQMrfvYeBzNzqolI1VFbYJoVFDbF3YvsbOfE1PWcCXnSAdy5DFWnjK0JTg5PcLjyzn6XUbx+4s4GRLh86XLXD8fqR9Qqfrypd6ySb8XRL/L3Q6yFGS80tpBLgVZV+rvKpA/6Jefw5R2CsgykK8YvvWp3w+KmzY/EOsA8SFNA5aD01cjc9RF3K/jGuSWVbxHs3BJ62KOL0C3gHSBPFuid5R+vwQyB+RukCOG7u3AqBLvDpXym5H7DVCCU/0hpSzw+/X+cOrH9b8e+OMgPjL4ix4B+56eVvTw3034U4L+fLU/8+kNkN9V8kcr/fcY/ux1+iYM8H9zLfg05qJFOgAAAABJRU5ErkJggg=="/></defs></symbol>
+		<symbol viewBox="0 0 72 72" id="icon2" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h72v72H0z"/><defs><pattern id="cpattern0" patternContentUnits="objectBoundingBox" width="1" height="1"><use xlink:href="#cimage0_1339_17" transform="scale(.01389)"/></pattern><image id="cimage0_1339_17" width="72" height="72" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="data:image/png;base64,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"/></defs></symbol>
+		<symbol viewBox="0 0 70 72" id="icon3" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h70v72H0z"/><defs><pattern id="dpattern0" patternContentUnits="objectBoundingBox" width="1" height="1"><use xlink:href="#dimage0_1339_15" transform="scale(.01429 .01389)"/></pattern><image id="dimage0_1339_15" width="70" height="72" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="data:image/png;base64,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"/></defs></symbol>
+		<symbol viewBox="0 0 68 68" id="icon4" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h68v68H0z"/><defs><pattern id="epattern0" patternContentUnits="objectBoundingBox" width="1" height="1"><use xlink:href="#eimage0_1339_21" transform="scale(.0147)"/></pattern><image id="eimage0_1339_21" width="68" height="68" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="data:image/png;base64,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"/></defs></symbol>
+		<symbol viewBox="0 0 84 84" id="play-icon" xmlns="http://www.w3.org/2000/svg"><image data-name="Векторный смарт-объект" width="84" height="84" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="data:img/png;base64,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"/></symbol>
+</svg>
+
+<!--
+====================================================================================================
+-->
+
+		<header>
+			<h1>SVG <code>&lt;symbol&gt;</code> sprite preview</h1>
+			<p>This preview features two methods of using the generated sprite in conjunction with inline SVG. Please have a look at the HTML source for further details and be aware of the following constraints:</p>
+			<ul>
+				<li>Your browser has to <a href="http://caniuse.com/#feat=svg-html5" target="_blank" rel="noopener noreferrer">support inline SVG</a> for these techniques to work.</li>
+				<li>The embedded sprite (A) slightly differs from the generated external one. Please <a href="https://github.com/svg-sprite/svg-sprite/blob/1.5.x/docs/configuration.md#defs--symbol-mode" target="_blank" rel="noopener noreferrer">see the documentation</a> for details on how to create such an embeddable sprite.</li>
+				<li>Internet Explorer up to version 11 doesn't support external sprites for use with inline SVG. For IE 9-11, you may polyfill this functionality with <a href="https://github.com/jonathantneal/svg4everybody" target="_blank" rel="noopener noreferrer">SVG for Everybody</a>.</li>
+			</ul>
+		</header>
+		<section>
+
+<!--
+
+A) Inline SVG with embedded sprite
+====================================================================================================
+These SVG images make use of fragment identifiers (IDs) and are extracted out of the inline sprite
+embedded above. They may be styled via CSS.
+
+-->
+
+			<h3>A) Inline SVG with embedded sprite</h3>
+			<ul>
+
+				<li title="arrow">
+					<div class="icon-box">
+
+						<!-- arrow -->
+						<svg class="svg-arrow-dims">
+							<use xlink:href="#arrow"></use>
+						</svg>
+
+					</div>
+					<h2>arrow</h2>
+				</li>
+				<li title="icon1">
+					<div class="icon-box">
+
+						<!-- icon1 -->
+						<svg class="svg-icon1-dims">
+							<use xlink:href="#icon1"></use>
+						</svg>
+
+					</div>
+					<h2>icon1</h2>
+				</li>
+				<li title="icon2">
+					<div class="icon-box">
+
+						<!-- icon2 -->
+						<svg class="svg-icon2-dims">
+							<use xlink:href="#icon2"></use>
+						</svg>
+
+					</div>
+					<h2>icon2</h2>
+				</li>
+				<li title="icon3">
+					<div class="icon-box">
+
+						<!-- icon3 -->
+						<svg class="svg-icon3-dims">
+							<use xlink:href="#icon3"></use>
+						</svg>
+
+					</div>
+					<h2>icon3</h2>
+				</li>
+				<li title="icon4">
+					<div class="icon-box">
+
+						<!-- icon4 -->
+						<svg class="svg-icon4-dims">
+							<use xlink:href="#icon4"></use>
+						</svg>
+
+					</div>
+					<h2>icon4</h2>
+				</li>
+				<li title="play-icon">
+					<div class="icon-box">
+
+						<!-- play-icon -->
+						<svg class="svg-play-icon-dims">
+							<use xlink:href="#play-icon"></use>
+						</svg>
+
+					</div>
+					<h2>play-icon</h2>
+				</li>
+			</ul>
+
+<!--
+====================================================================================================
+-->
+
+		</section>
+		<section>
+
+<!--
+
+B) Inline SVG with external sprite (IE 9-11 with polyfill only)
+====================================================================================================
+These SVG images make use of an URL + fragment identifiers (IDs) and refer to the regular external
+SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
+
+-->
+
+			<h3>B) Inline SVG with external sprite (IE 9-11 with polyfill only)</h3>
+			<ul>
+
+				<li title="arrow">
+					<div class="icon-box">
+
+						<!-- arrow -->
+						<svg class="svg-arrow-dims">
+							<use xlink:href="../sprite.svg#arrow"></use>
+						</svg>
+
+					</div>
+					<h2>arrow</h2>
+				</li>
+				<li title="icon1">
+					<div class="icon-box">
+
+						<!-- icon1 -->
+						<svg class="svg-icon1-dims">
+							<use xlink:href="../sprite.svg#icon1"></use>
+						</svg>
+
+					</div>
+					<h2>icon1</h2>
+				</li>
+				<li title="icon2">
+					<div class="icon-box">
+
+						<!-- icon2 -->
+						<svg class="svg-icon2-dims">
+							<use xlink:href="../sprite.svg#icon2"></use>
+						</svg>
+
+					</div>
+					<h2>icon2</h2>
+				</li>
+				<li title="icon3">
+					<div class="icon-box">
+
+						<!-- icon3 -->
+						<svg class="svg-icon3-dims">
+							<use xlink:href="../sprite.svg#icon3"></use>
+						</svg>
+
+					</div>
+					<h2>icon3</h2>
+				</li>
+				<li title="icon4">
+					<div class="icon-box">
+
+						<!-- icon4 -->
+						<svg class="svg-icon4-dims">
+							<use xlink:href="../sprite.svg#icon4"></use>
+						</svg>
+
+					</div>
+					<h2>icon4</h2>
+				</li>
+				<li title="play-icon">
+					<div class="icon-box">
+
+						<!-- play-icon -->
+						<svg class="svg-play-icon-dims">
+							<use xlink:href="../sprite.svg#play-icon"></use>
+						</svg>
+
+					</div>
+					<h2>play-icon</h2>
+				</li>
+			</ul>
+
+<!--
+====================================================================================================
+-->
+
+		</section>
+		<footer>
+			<p>Generated at Fri, 03 Jun 2022 08:45:03 GMT by <a href="https://github.com/svg-sprite/svg-sprite" target="_blank" rel="noopener noreferrer">svg-sprite</a>.</p>
+		</footer>
+	</body>
+</html>

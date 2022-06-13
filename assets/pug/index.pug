@@ -1,0 +1,25 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'HOME'}
+block content_block
+	
+	.container
+		input#toggle(type="checkbox")
+		label.toggle-container(for="toggle")
+			span.button.button-toggle
+
+		nav.nav
+			a.nav-item(href="#") Dashboard
+			a.nav-item(href="#") Dashboard
+			a.nav-item(href="#") Dashboard
+			a.nav-item(href="#") Dashboard
+
+
+		//- section.dummy-content
+		//- 	.circle
+		//- 	.text
+		//- 		span
+		//- 		span
+		//- 	.square-top
+		//- 	.square-behind
