@@ -1,22 +1,14 @@
-// .button{
-//     border-radius: 6px;
-//     background: -webkit-linear-gradient( 90deg, rgb(255,33,79) 0%, rgb(255,92,1) 100%);
-//     cursor: pointer;
-//     width: 28rem;
-//     height: 7rem;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-// 		font-family: $font_3;     
-// }
-// .titleBlock{
-//     font-size: 6rem;
-//     font-family: $font_3;
-//     color: #000;
-//     text-transform: uppercase;
-//     line-height: 1.2;
-//     text-align: left;
-// 		@include bp ($point_3){
-// 			font-size: 4.2rem
-// 		}
-// }
+.titleBlock{
+    font-size: 4rem;
+    font-family: $font_1;
+    color: $black;
+    line-height: 5rem;
+		@include bp ($point_3){
+			font-size: 4.2rem
+		}
+}
+span{
+  background: linear-gradient(297.31deg, #8546D7 -2.19%, #B28EE1 104.59%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

@@ -1,5 +1,5 @@
 // Global 
-$header: 10rem;
+$header: 8rem;
 $footer: 20rem;
 
 // Mobile
@@ -9,22 +9,23 @@ $footer_mob: 10rem;
 
 //---------------------------------------------fonts
 $font_path: "../fonts/";
-$font_1: 'Montserrat-Regular', sans-serif;
-$font_2: 'Montserrat-SemiBold', sans-serif;
-$font_3: 'Montserrat-Bold', sans-serif;
+$font_1: 'Geometria-Bold', sans-serif;
+$font_2: 'Geometria-Regular', sans-serif;
+$font_3: 'SFProDisplay-Regular', sans-serif;
 $font_size_base: 1.8rem;
 //---------------------------------------------fonts###
 
 //---------------------------------------------colors
 $white: #fff;
-$black: #1A191D;
+$black: #363636;
 $gray:  #c2c2c2;
 $gold: #ffe100;
-$gradient: linear-gradient(178.58deg, #FF5C01 19.37%, #FF214F 79.34%);
+$gradient:  linear-gradient(91.32deg, #8546D7 0.59%, #B28EE1 101.83%);
+$gradient-icon: linear-gradient(297.31deg, #8546D7 -2.19%, #B28EE1 104.59%);
 
 
 
-$color_text_base: $white;
+// $color_text_base: $white;
 $color_link_base: $gold;
 $body_bg: $black;
 //---------------------------------------------colors###
@@ -38,7 +39,7 @@ $z-index: (
 //---------------------------------------------z-index###
 
 //---------------------------------------------layout
-$page_width: 158rem;
+$page_width: 150.2rem;
 
 //---------------------------------------------layout###
 
@@ -50,7 +51,6 @@ $gl_radius:.5rem;
 
 $point: 1900px;
 $point_0: 1680px;
-$point_1400: 1400px;
 $point_1: 1200px;
 $point_2: 1024px;
 $point_3: 1023px;
