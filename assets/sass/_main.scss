@@ -12,8 +12,6 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		
-
 	}
 	&__title{
 		padding-bottom: 5rem;
@@ -30,13 +28,119 @@
 		width: 65%;
 	}
 	&__col{
-		width: 50%;
+		width: 60%;
 	}
 	&__col:nth-child(2){
 		padding-top: 4.5rem;
 		padding-left: 10rem;
 	}
+	&-list{
+		position: relative;
+		width: 100%;
+	}
+	&-list::after{
+		content: url(../i/list.png);
+		position: absolute;
+		right: 23%;
+	}
 }
 .signUp-massage__img img{
 	width: 100%;
+}
+.services{
+	text-align: center;
+}
+.services-card{
+	&__title{
+		font-size: 2.2rem;
+		font-family: $font_1;
+		
+	}
+	&__text{
+		font-size: 1.8rem;
+		font-family: $font_3;
+		color:#8A8A8A;
+
+	}
+	&__price{
+		background: linear-gradient(297.31deg, #8546D7 -2.19%, #B28EE1 104.59%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+}
+.advantages{
+	&__title{
+		padding-bottom: 11.5rem;
+	}
+
+	&__item{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 33.5rem;
+		height: 13.9rem;
+		background: #FFFFFF;
+		box-shadow: 0px 6px 19px rgba(39, 0, 91, 0.11);
+		border-radius: 50px;
+		opacity: 0;
+		transition: all 0.2s;
+	}
+	&__wrapp{
+		position: relative;
+		width: 33.5rem;
+	}
+	&__text {
+		font-size: 2rem;
+		color:$black;
+		font-family: $font_3;
+		line-height: 24px;
+
+	}
+}
+.advantages__item.active{
+	opacity: 1;
+}
+.advantages__button{
+	position: absolute;
+	left:100%;
+	top: 50%;
+  width: 75px;
+  height: 75px;
+  background: linear-gradient(297.31deg, #8546D7 -2.19%, #B28EE1 104.59%);
+  transform: translate(-50%, -50%) rotate(0deg);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 100;
+  transition: 0.4s cubic-bezier(0.2, 0.6, 0.3, 1.1);
+}
+
+.advantages__button:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 2px;
+  width: 50%;
+  background: white;
+}
+
+.advantages__button:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 50%;
+  width: 2px;
+  background: white;
+}
+
+.advantages__button.clicked {
+  transform: translate(-50%, -50%) rotate(360deg);
+	background: linear-gradient(297.31deg, #8546D7 -2.19%, #B28EE1 104.59%);
+}
+
+.advantages__button.clicked:before {
+  width: 0;
 }
