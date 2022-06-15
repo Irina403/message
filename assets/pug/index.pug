@@ -55,16 +55,47 @@ block content_block
 
 				.gallery-list.slick-slider 	
 					.gallery-list__item 
-						img(src="i/video-scrin1.png", alt="")
+						video.video(controls)
+							source(src="i/video/video1.mp4" type="video/mp4")
+						.video-is-playing
 					.gallery-list__item 
-						img(src="i/video-scrin2.png", alt="")
+						video.video(controls)
+							source(src="i/video/video2.mp4" type="video/mp4")
+						.video-is-playing
 					.gallery-list__item 
-						img(src="i/video-scrin3.png", alt="")
+						video.video(controls)
+							source(src="i/video/video3.mp4" type="video/mp4")
+						.video-is-playing
 					.gallery-list__item 
-						img(src="i/video-scrin1.png", alt="")
-				
+						video.video(controls)
+							source(src="i/video/video4.mp4" type="video/mp4")
+						.video-is-playing
 				.gallery-list__arrow.arrow-gallery 
 					.your-class-arrow
+
+	.section_in
+		.step-list
+			.step-list__title.titleBlock Как записаться на <span> массаж? </span>
+
+			.step-list__item 
+				.step-list__num
+					.num-step шаг
+					.text-step 01
+				.step-list__icon 
+					img(src="../i/icons/step1.svg", alt="")
+				.step-list__title Оставьте заявку
+				.step-list__text Оставьте заявку на сайте или позвоните нам по номеру 
+					a(href="#") +7 000 000 00 00
+				.step-list__img 
+					img(src="../i/towels.png", alt="")
+			
+			.step-list__line 
+				img(src="../i/line1.png", alt="")
+
+				
+
+
+
 
 
 
