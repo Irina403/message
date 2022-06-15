@@ -144,3 +144,52 @@
 .advantages__button.clicked:before {
   width: 0;
 }
+
+.gallery-list__item img{
+	max-width: 66rem;
+}
+
+.gallery-video {
+	padding-bottom: 50rem;
+}
+.slick-list{
+	padding:0 20% 0% 30% !important;
+	// @include bp ($point_0){
+	// 	padding:0 20% 0% 30% !important;
+	// }
+}
+.your-class-arrow{
+	position: relative;
+	margin-top: -15%;
+	display: flex;
+	justify-content: space-around;
+	cursor: pointer;
+}
+.arrow-gallery {
+	position: relative;
+}
+.your-class-arrow{
+	position: absolute;
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+}
+.prev{
+	margin-left: 48px;
+}
+.next{
+	margin-left: 52px;
+}
+.slick-slide.slick-current.slick-active{
+	position: relative;
+}
+.slick-slide.slick-current.slick-active:after{
+	content: '';
+	top: 0;
+	position: absolute;
+	display: block;
+	width: 66rem;
+	height: 98%;
+	border-radius: 20px;
+	background: linear-gradient(0deg, rgba(132, 71, 213, 0.2), rgba(132, 71, 213, 0.2));
+}
