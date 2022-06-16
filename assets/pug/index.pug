@@ -4,7 +4,15 @@ block vars
 	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'HOME'}
 block content_block
 	
-	.main-banner 
+	.main-banner
+		.main-banner__img 
+			img(src="i/bg.png", alt="") 
+		.section_in
+			.main-banner__title.titleBlock Польза для <span> души и тела </span>
+				.main-banner__text Профессиональный массаж в городе Московский
+				.main-banner__button.button
+					.button-text Оставить заявку
+
 
 	.section_in
 		.signUp-massage
@@ -24,16 +32,52 @@ block content_block
 			.services__row 
 				.services__title.titleBlock Заботимся о вашем <span> здоровье </span>
 
-				ul.servces__list 
+				ul.services__list 
 					li.services__item.services-card 
 						.services-card__img 
-							img(src="../i/services1.png", alt="") 
-						.services-card__title Для красоты лица
-						.services-card__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-						.services-card__footer 
-							.services-card__price от 3000₽
-							.services-card__button 	
-								a(href="#") Подробнее
+							img(src="../i/services1.png", alt="")
+						.services-card__item-box 
+							.services-card__title Для красоты лица
+							.services-card__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+							.services-card__footer 
+								.services-card__price от 3000₽
+								.services-card__button.button(data-toggle="modal" data-target="#modal-1")
+									.button__link Подробнее
+					
+					li.services__item.services-card 
+						.services-card__img 
+							img(src="../i/services2.png", alt="") 
+						.services-card__item-box 
+							.services-card__title Для красоты тела
+							.services-card__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+							.services-card__footer 
+								.services-card__price от 3000₽
+								.services-card__button.button(data-toggle="modal" data-target="#modal-2") 	
+									.button__link Подробнее
+
+					li.services__item.services-card 
+						.services-card__img 
+							img(src="../i/services3.png", alt="")
+						.services-card__item-box  
+							.services-card__title LPG-массаж
+							.services-card__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+							.services-card__footer 
+								.services-card__price от 3000₽
+								.services-card__button.button 	
+									.button__link Подробнее
+
+					li.services__item.services-card 
+						.services-card__img 
+							img(src="../i/services4.png", alt="")
+						.services-card__item-box  
+							.services-card__title Релакс
+							.services-card__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+							.services-card__footer 
+								.services-card__price от 3000₽
+								.services-card__button.button 	
+									.button__link Подробнее
+				
+
 
 
 	.section_in
@@ -91,6 +135,31 @@ block content_block
 			
 			.step-list__line 
 				img(src="../i/line1.png", alt="")
+
+			.step-list__item 
+				.step-list__num
+					.num-step шаг
+					.text-step 02
+				.step-list__icon 
+					img(src="../i/icons/step2.svg", alt="")
+				.step-list__title Уточните детали
+				.step-list__text Наш менеджер свяжется с вами,расскажет об услуге и поможет выбрать время
+			
+			.step-list__line 
+				img(src="../i/line2.png", alt="")
+
+			
+			.step-list__item 
+				.step-list__num
+					.num-step шаг
+					.text-step 03
+				.step-list__icon 
+					img(src="../i/icons/step1.svg", alt="")
+				.step-list__title Приходите в клинику
+				.step-list__text В назначенный день и в нужное время приходите в студию и наслаждайтесь!
+			
+				.step-list__img 
+					img(src="../i/massage table.png", alt="")
 
 				
 

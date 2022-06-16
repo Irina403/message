@@ -30,10 +30,25 @@ $('.video').parent().click(function () {
 });
 
 
+document.addEventListener("DOMContentLoaded", function(){
 
+	document.addEventListener('click', function (e) {
+		// var scrollbar = document.body.clientWidth - window.innerWidth + 'rem';
+		let $target = e.target;
+		if ($target.closest('[data-toggle="modal"]')) {
+			e.preventDefault();
+			$target = $target.closest('[data-toggle="modal"]');
+			document.querySelector($target.dataset.target).classList.add('open');
+			//выключить скролл под модальным окном
+			// document.body.style.overflow = 'hidden';
 
+		} else if ($target.dataset.close === 'modal') {
+			// e.preventDefault();
+			$target.closest('.modal').classList.remove('open');
+			//включить скролл после закрытия модального окна
+			// document.body.style.overflow = 'visible'; 
+		}
+	});
 
-
-
-
+});
 

@@ -1,0 +1,113 @@
+.modal{
+	&__dialog{
+		position: relative;
+		padding: 1rem 6rem;
+		width: 100.6rem;
+		// height: 72.9rem;
+		background-color: #fff;
+		box-shadow: 0px 27px 64px rgba(39, 0, 91, 0.07);
+		border-radius: 20px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+	}
+}
+.close{
+	position: absolute;
+	top: 2rem;
+	right: 2rem;
+}
+.close::after{
+	content: url(../../i/icons/close-popup.svg);
+	cursor: pointer;
+
+	
+}
+.modal__title{
+	padding-top: 6rem;
+	color: #884AD8;
+	font-size: 2.2rem;
+	font-family:$font_1;
+}
+.modal__text{
+	padding-top: 3rem;
+	font-size: 1.8rem;
+	font-family: $font_3;
+	color:$black;
+}
+.list-price{
+	padding-top: 8rem;
+	margin-bottom: 10rem;
+	&__item{
+		margin-top: 3rem;
+		display: flex;
+		justify-content: space-between;
+		border-bottom: 1px solid #F5F5F5;
+		padding-bottom: 1rem;
+	}
+	&__item-box{
+		width: 23rem;
+		justify-content: space-between;
+		display: flex;
+	}
+	&__text{
+		font-size: 1.8rem;
+		font-family: $font_3;
+		color:$black;
+	}
+	&__time{
+		font-size: 1.8rem;
+		font-family: $font_3;
+		color:$black;
+	}
+	&__price{
+		font-size: 1.8rem;
+		font-family: $font_3;
+		color: #884AD8;
+	
+	}
+}
+.modal-form{
+	margin-bottom: 7rem;
+	&__block {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+	&__button{
+		width: 28rem;
+		height: 6.2rem;
+		background: $gradient;
+		border-radius: 5rem;
+	}
+	&__input{
+		padding-left: 2rem;
+		width: 28rem;
+		height: 6.2rem;
+		background-color: #fff;
+		box-shadow: 0px 27px 64px rgba(39, 0, 91, 0.07);
+		border-radius: 5rem;
+		border:none;
+		color:#8A8A8A;
+	}
+}
+
+
+.modal {
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  pointer-events: none;
+  transition: opacity 400ms ease-in;
+}
+
+.open {
+  opacity: 1;
+  pointer-events: auto;
+}

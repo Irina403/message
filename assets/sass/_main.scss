@@ -1,3 +1,8 @@
+.main-banner{
+	&__img img{
+		width: 100%;
+}
+}
 .signUp-massage{
 	padding-top: 10rem;
 	&__row{
@@ -49,23 +54,72 @@
 }
 .services{
 	text-align: center;
+	margin-bottom: 10rem;
+	&__list{
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+	&__item{
+		width: 36.5rem;
+		height: 43.5rem;
+		background: #FFFFFF;
+		box-shadow: 0px 27px 64px rgba(39, 0, 91, 0.07);
+		border-radius: 20px;
+
+	}
 }
 .services-card{
+	&__item-box{
+		padding-top: 1.5rem;
+		padding-left: 2rem;
+		padding-bottom: 2rem;
+		padding-right: 2rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 21.4rem;
+	}
 	&__title{
 		font-size: 2.2rem;
-		font-family: $font_1;
+		font-family: $font_2;
+		text-align: left;
 		
 	}
 	&__text{
 		font-size: 1.8rem;
 		font-family: $font_3;
 		color:#8A8A8A;
+		text-align: left;
 
 	}
 	&__price{
 		background: linear-gradient(297.31deg, #8546D7 -2.19%, #B28EE1 104.59%);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
+	}
+	&__button{
+		width: 16.5rem;
+		height: 5.9rem;
+		background: $gradient;
+		border-radius: 5rem;
+	
+	}
+	&__footer{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+.button{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	&__link{
+		color: #fff;
+		font-size: 1.8rem;
+		font-family: $font_3;
 	}
 }
 .advantages{
@@ -197,6 +251,7 @@
 .next{
 	margin-left: 52px;
 }
+
 // .slick-slide.slick-current.slick-active{
 // 	position: relative;
 // }
