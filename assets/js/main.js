@@ -49,6 +49,9 @@ document.addEventListener("DOMContentLoaded", function(){
 			// document.body.style.overflow = 'visible'; 
 		}
 	});
+	document.querySelector('.advantages__button').onclick = function() {
+		document.querySelector('.advantages__item').classList.toggle('active');
+	}
 // 	document.addEventListener("DOMContentLoaded", function(){
 // 	let clickBtn = document.querySelector('.advantages__button');
 // 	let itemAdvant = this.getAttribute('data-m'),
@@ -64,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function(){
 // });
 
 
-//https://only-to-top.ru/blog/coding/2019-09-30-klik-vne-elementa.html
+
 
 
 });
