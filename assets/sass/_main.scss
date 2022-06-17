@@ -1,7 +1,38 @@
 .main-banner{
-	&__img img{
-		width: 100%;
+	position: relative;
+	&__img{
+		height: 71.2rem;
+		background-image: url(../i/bg.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		
+	}
+
+	&__textBlock{
+		position: absolute;
+		top: 25%;
+	
+	}
+	&__title{
+		font-size: 5rem !important;
+		padding-bottom: 1.5rem;
+	}
+	&__text{
+		padding-bottom: 6rem;
+		font-size: 2rem;
+	}
+	&__button{
+		width: 26.9rem;
+		height: 7.2rem;
+		border-radius: 5rem;
+		background: linear-gradient(91.32deg, #8546D7 0.59%, #B28EE1 101.83%);
+		box-shadow: 5px 8px 13px rgba(173, 134, 224, 0.45), inset 1px -1px 10px rgba(52, 0, 118, 0.24);
+		color: #fff;
+	}
 }
+.button-text{
+	font-size: 2rem;
+	font-family: $font_3;
 }
 .signUp-massage{
 	padding-top: 10rem;
@@ -12,14 +43,7 @@
 	&__img{
 		position: relative;
 	}
-	&__img:after {
-		content: url(../i/list1.png);
-		position: absolute;
-		top: 0;
-		left: 0;
-	}
 	&__title{
-		padding-bottom: 5rem;
 		width: 80%;
 	}
 	&__text{
@@ -56,6 +80,8 @@
 	text-align: center;
 	margin-bottom: 10rem;
 	&__list{
+		margin-bottom: 8rem;
+		margin-top: 9rem;
 		width: 100%;
 		display: flex;
 		justify-content: space-between;
@@ -122,6 +148,26 @@
 		font-family: $font_3;
 	}
 }
+.button-collaps {
+	margin: auto;
+	width: 29.4rem;
+	height: 7.2rem;
+	border-radius: 5rem;
+	border: 1px solid #8546D7;
+	&__text{
+		background: linear-gradient(297.31deg, #8546D7 -2.19%, #B28EE1 104.59%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-family: $font_3;
+	}
+	&__text::after{
+		padding-left: 2rem;
+		content: url(../i/icons/arrow-down.svg);
+
+	}
+
+
+}
 .advantages{
 	&__title{
 		padding-bottom: 11.5rem;
@@ -150,10 +196,13 @@
 		line-height: 24px;
 
 	}
+
 }
+
 .advantages__item.active{
 	opacity: 1;
 }
+
 .advantages__button{
 	position: absolute;
 	left:100%;

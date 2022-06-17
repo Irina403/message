@@ -49,6 +49,23 @@ document.addEventListener("DOMContentLoaded", function(){
 			// document.body.style.overflow = 'visible'; 
 		}
 	});
+// 	document.addEventListener("DOMContentLoaded", function(){
+// 	let clickBtn = document.querySelector('.advantages__button');
+// 	let itemAdvant = this.getAttribute('data-m'),
+// 			itemElem = document.querySelector('.advantages__item[data-m="' + itemAdvant +'"]');
+
+// 		clickBtn.onClick = function(event){
+// 			event.preventDefault();
+// 			console.log('gdfgdf');
+
+// 			itemElem.classList.add('active');
+// 	};
+
+// });
+
+
+//https://only-to-top.ru/blog/coding/2019-09-30-klik-vne-elementa.html
+
 
 });
 
