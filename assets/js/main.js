@@ -1,10 +1,21 @@
-$(".advantages__button").click(function() {
-  $(this).toggleClass("clicked");
-});
+// $('.advantages__button').click(function() {
+// 	var id = $(this).attr('data-trigger'),
+// 		content = $('.advantages__item[data-trigger="'+ id +'"]');
+// 	// $('.advantages__button').removeClass('clicked'); // 1
+// 	$(this).toggleClass('clicked'); // 2
+// 	// $('.advantages__item').removeClass('active'); // 3
+// 	content.toggleClass('active'); // 4
+//  });
 
-$(".advantages__button").click(function() {
-	$(".advantages__item").toggleClass("active");
-});
+ $('.advantages__button').click(function() {
+	var id = $(this).attr('data-trigger'),
+		content = $('.advantages__item[data-trigger="'+ id +'"]');
+	$('.advantages__button').removeClass('clicked'); // 1
+	$(this).addClass('clicked'); // 2
+	$('.advantages__item').removeClass('active'); // 3
+	content.addClass('active'); // 4
+ });
+
 
 $(document).ready(()=> {
 	$('.slick-slider').slick({
@@ -62,14 +73,30 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
 
-		document.addEventListener("click", function(e){
-			let $elem = e.elem;
-			$elem = $elem.closest('[data-id="advant"]');
-			document.querySelector($elemt.dataset.elem).classList.add('active');
-		})
+		// document.addEventListener("click", function(e){
+		// 	let $elem = e.elem;
+		// 	$elem = $elem.closest('[data-id="advant"]');
+		// 	document.querySelector($elemt.dataset.elem).classList.add('active');
+		// });
 
 
+	// var jsTriggers = document.querySelectorAll('.js-tab-trigger'),
+    // jsContents = document.querySelectorAll('.js-tab-content');
 
+	// 	jsTriggers.forEach(function(trigger) {
+	// 	trigger.addEventListener('click', function() {
+	// 		var id = this.getAttribute('data-tab'),
+	// 			content = document.querySelector('.js-tab-content[data-tab="'+id+'"]'),
+	// 			activeTrigger = document.querySelector('.js-tab-trigger.active'),
+	// 			activeContent = document.querySelector('.js-tab-content.active');
+			
+	// 		activeTrigger.classList.remove('active');
+	// 		trigger.classList.add('active');
+			
+	// 		activeContent.classList.remove('active');
+	// 		content.classList.add('active');
+	// 	});
+	// 	});
 
 
 });
