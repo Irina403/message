@@ -137,12 +137,12 @@ block content_block
 					.advantages__wrapp
 						.advantages__item
 							.advantages__text Повышает иммунитет
-						.advantages__button
+						.advantages__button(data-id="advant" data-elem="advant1")
 				
 					.advantages__wrapp
 						.advantages__item
 							.advantages__text Повышает иммунитет2
-						.advantages__button
+						.advantages__button(data-id="advant" data-elem="advant2")
 
 	.section_in
 		.gallery-video 
@@ -174,47 +174,54 @@ block content_block
 		.step-list
 			.step-list__title.titleBlock Как записаться на <span> массаж? </span>
 
-			.step-list__item 
-				.step-list__num
-					.num-step шаг
-					.text-step 01
-				.step-list__icon 
-					img(src="../i/icons/step1.svg", alt="")
-				.step-list__title Оставьте заявку
-				.step-list__text Оставьте заявку на сайте или позвоните нам по номеру 
-					a(href="#") +7 000 000 00 00
-				.step-list__img 
-					img(src="../i/towels.png", alt="")
-			
-			.step-list__line 
-				img(src="../i/line1.png", alt="")
+			.step-list__row
+				.step-list__item 
+					.step-list__num
+						.num-step шаг
+						.text-step 01
+					.step-list__content
+						.step-list__icon 
+							img(src="../i/icons/step1.svg", alt="")
+						.step-list__title-block Оставьте заявку
+						.step-list__text Оставьте заявку на сайте или позвоните нам по номеру<br>
+							a(href="#") +7 000 000 00 00
+						.step-list__img 
+							img(src="../i/towels.png", alt="")
+					
+				.step-list__line 
+					img(src="../i/line1.png", alt="")
 
-			.step-list__item 
-				.step-list__num
-					.num-step шаг
-					.text-step 02
-				.step-list__icon 
-					img(src="../i/icons/step2.svg", alt="")
-				.step-list__title Уточните детали
-				.step-list__text Наш менеджер свяжется с вами,расскажет об услуге и поможет выбрать время
-			
-			.step-list__line 
-				img(src="../i/line2.png", alt="")
-
-			
-			.step-list__item 
-				.step-list__num
-					.num-step шаг
-					.text-step 03
-				.step-list__icon 
-					img(src="../i/icons/step1.svg", alt="")
-				.step-list__title Приходите в клинику
-				.step-list__text В назначенный день и в нужное время приходите в студию и наслаждайтесь!
-			
-				.step-list__img 
-					img(src="../i/massage table.png", alt="")
+				.step-list__item.step-list__item-style 
+					.step-list__num
+						.num-step шаг
+						.text-step 02
+					.step-list__content
+						.step-list__icon 
+							img(src="../i/icons/step2.svg", alt="")
+						.step-list__title-block Уточните детали
+						.step-list__text Наш менеджер свяжется с вами,расскажет об услуге и поможет выбрать время
+				
+				.step-list__line 
+					img(src="../i/line2.png", alt="")
 
 				
+				.step-list__item 
+					.step-list__num
+						.num-step шаг
+						.text-step 03
+					.step-list__content
+						.step-list__icon 
+							img(src="../i/icons/step3.svg", alt="")
+						.step-list__title-block Приходите в клинику
+						.step-list__text В назначенный день и в нужное время приходите в студию и наслаждайтесь!
+					
+						.step-list__img.step-list__img-col3 
+							img(src="../i/massage table.png", alt="")
+
+					
+	.section_in
+		.specialist-block
+			.specialist-block.titleBlock Наши <span> специалисты </span>
 
 
 

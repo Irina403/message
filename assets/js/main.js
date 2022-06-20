@@ -49,22 +49,14 @@ document.addEventListener("DOMContentLoaded", function(){
 			// document.body.style.overflow = 'visible'; 
 		}
 	});
-	document.querySelector('.advantages__button').onclick = function() {
-		document.querySelector('.advantages__item').classList.toggle('active');
-	}
-// 	document.addEventListener("DOMContentLoaded", function(){
-// 	let clickBtn = document.querySelector('.advantages__button');
-// 	let itemAdvant = this.getAttribute('data-m'),
-// 			itemElem = document.querySelector('.advantages__item[data-m="' + itemAdvant +'"]');
 
-// 		clickBtn.onClick = function(event){
-// 			event.preventDefault();
-// 			console.log('gdfgdf');
 
-// 			itemElem.classList.add('active');
-// 	};
 
-// });
+		document.addEventListener("click", function(e){
+			let $elem = e.elem;
+			$elem = $elem.closest('[data-id="advant"]');
+			document.querySelector($elemt.dataset.elem).classList.add('active');
+		})
 
 
 
