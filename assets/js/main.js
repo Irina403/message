@@ -17,6 +17,16 @@ $(document).ready(()=> {
 		nextArrow: '<img class="slick-arrow next" src="../i/icons/icon-next.svg" alt="" " aria-hidden="true"></img>'
 		
 	});
+
+	$('.slider-gallery').slick({
+		arrows:true,
+		infinite: true,
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		appendArrows: $('.slider-gallery__arrow'),
+		prevArrow: '<img class="slick-arrow prev-slider2" src="../i/icons/icon-prev.svg" alt="" " aria-hidden="true"></img>',
+		nextArrow: '<img class="slick-arrow next-slider2" src="../i/icons/icon-next.svg" alt="" " aria-hidden="true"></img>'
+	});
 })
 
 $('.video').parent().click(function () {

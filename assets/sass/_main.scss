@@ -259,10 +259,67 @@
 .gallery-video {
 	padding-bottom: 10rem;
 }
-.slick-list{
+.slick-slider>.slick-list{
 	padding:0 20% 0% 30% !important;
+}
+.slider-gallery{
+	&__item{
+		display: flex !important;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__name{
+		font-size: 2.2rem;
+		font-family: $font_1;
+	}
+	&__description{
+		margin-bottom: 1rem;
+		text-align: center;
+		font-size: 1.8rem;
+		color: #8A8A8A;
+		font-family: $font_3;
+	}
+	&__arrow{
+		position: absolute;
+		top: 25%;
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		cursor: pointer;
+	}
+	&__img{
+		margin-bottom: 3.1rem;
+		position: relative;
+	}
+	// &__img:hover{
+	// 	// content: '';
+	// 	top:0;
+	// 	position: absolute;
+	// 	width: 100%;
+	// 	height: 100%;
+	// 	background: linear-gradient(0deg, rgba(132, 71, 213, 0.3), rgba(132, 71, 213, 0.3));
+	// 	border-radius: 100%;
+
+	// }
+}
+.slider-gallery>.slick-list{
+	padding:0 0% 0% 0% !important;
+}
+.specialist-block{
+	&__slider{
+		position: relative;
+	}
+	&__title{
+		text-align: center;
+		padding-bottom: 11rem;
+	}
 
 }
+.slider-gallery__arrow{
+	position: absolute;
+}
+
 // .video-is-playing{
 // 	background-image:url(../i/icons/icon-play.svg);
 // 	width:20%;
@@ -316,6 +373,7 @@
 // }
 .step-list{
 	&__row{
+		padding-bottom: 22.4rem;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -395,4 +453,32 @@
 	background: linear-gradient(297.31deg, #8546D7 -2.19%, #B28EE1 104.59%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.contact-form{
+	background: linear-gradient(85.31deg, rgba(255, 255, 255, 0.62) -13.08%, rgba(178, 142, 225, 0) -9.09%, rgba(186, 167, 212, 0.24) 131.76%, rgba(208, 194, 225, 0.165321) 144.04%);
+	filter: drop-shadow(0px 27px 64px rgba(39, 0, 91, 0.07));
+	border-radius: 50px;
+	&__row {
+		display: flex;
+	}
+	&__input{
+		background: #FFFFFF;
+		box-shadow: 0px 27px 64px rgba(39, 0, 91, 0.07);
+		border-radius: 50px;	
+		border: none;
+		height: 6.2rem;
+		width: 25.2rem;
+	}
+	&__btn{
+		background: linear-gradient(91.32deg, #8546D7 0.59%, #B28EE1 101.83%);
+		box-shadow: 5px 8px 13px rgba(173, 134, 224, 0.45), inset 1px -1px 10px rgba(52, 0, 118, 0.24);
+		border-radius: 50px;
+		color: #fff;
+		height: 6.2rem;
+		width: 25.2rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-family: $font_3;
+	}
 }
