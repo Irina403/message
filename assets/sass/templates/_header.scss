@@ -10,19 +10,32 @@ $transition-delay: 0.05s;
 
 .navigation{
 	height: $header;
+	@include bp($point_3){
+		display: none;
+	}
 	&__desk{
+		height: $header;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 	}
 	&__list{
 		display: flex;
+		margin-right: 2rem;
 	}
 	&__item a{
-		padding-left: 5rem;
+		padding-left: 4rem;
 		font-size: 2rem;
 		font-family: $font_3;
 		color:$black;
+		@include bp($point_0){
+			padding-left: 2rem;
+		}
+	&__logo img{
+		@include bp($point_1){
+			width: 80%;
+		}
+	}
 	}
 }
 .contact-header{
@@ -45,7 +58,7 @@ $transition-delay: 0.05s;
   	-webkit-text-fill-color: transparent;
 	}
 	&__item{
-		padding-left: 5rem;
+		padding-left: 4rem;
 		display: flex;
 		align-items: center;
 	}

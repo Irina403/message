@@ -12,3 +12,8 @@ span{
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+a{
+	text-decoration: none;
+	color:$black;
+	font-family: $font_3;
+}

@@ -132,17 +132,30 @@ block content_block
 		.advantages 
 			.advantages__row
 				.advantages__title.titleBlock Какие плюсы у <span> массажа? <span>
+				.advantages__container
+					.advantages__block
+						.advantages__wrapp.advantages__wrapp-el-1
+							.advantages__item(data-trigger="advant1")
+								.advantages__text Повышает иммунитет
+							.advantages__button(data-trigger="advant1")
+					
+						.advantages__wrapp.advantages__wrapp-el-2
+							.advantages__item(data-trigger="advant2")
+								.advantages__text Повышает иммунитет2
+							.advantages__button(data-trigger="advant2")
+						.advantages__img
+							img(src="/i/woman-message.png", alt="")
 
-				.advantages__block
-					.advantages__wrapp
-						.advantages__item(data-trigger="advant1")
-							.advantages__text Повышает иммунитет
-						.advantages__button(data-trigger="advant1")
-				
-					.advantages__wrapp
-						.advantages__item(data-trigger="advant2")
-							.advantages__text Повышает иммунитет2
-						.advantages__button(data-trigger="advant2")
+					.advantages__block
+						.advantages__wrapp.advantages__wrapp-el-3
+							.advantages__item(data-trigger="advant3")
+								.advantages__text Повышает иммунитет3
+							.advantages__button.advantages__button-right(data-trigger="advant3")
+					
+						.advantages__wrapp.advantages__wrapp-el-4
+							.advantages__item(data-trigger="advant4")
+								.advantages__text Снижает мышечное <br> напряжение
+							.advantages__button.advantages__button-right(data-trigger="advant4")
 
 	.section_in
 		.gallery-video 
@@ -170,6 +183,9 @@ block content_block
 				.gallery-list__arrow.arrow-gallery 
 					.your-class-arrow
 
+	.step-list-bg
+		.step-list-bg__img 
+			img(src="i/bg-wave2.png", alt="")
 	.section_in
 		.step-list
 			.step-list__title.titleBlock Как записаться на <span> массаж? </span>
@@ -257,20 +273,9 @@ block content_block
 				
 				.slider-gallery__arrow
 	
-	.section_in
-		.contact-form 
-			.contact-form__row 
-				.contact-form__col-left 
-					.contact-form__img 
-						img(src="i/table-form.png", alt="")
-				.contact-form__col-right 
-					.contact-form__title.titleBlock Форма <span> заявки </span>
-						.contact-form__text Оставьте заявку, и мы вам перезвоним!
+	
+	
 
-					.contact-form__form 
-						input.contact-form__input(type="text" placeholder="Ваше имя")
-						input.contact-form__input(type="text" placeholder="Ваш телефон")
-						.contact-form__btn Оставить заявку
 
 
 

@@ -1,20 +1,20 @@
-// $('.advantages__button').click(function() {
-// 	var id = $(this).attr('data-trigger'),
-// 		content = $('.advantages__item[data-trigger="'+ id +'"]');
-// 	// $('.advantages__button').removeClass('clicked'); // 1
-// 	$(this).toggleClass('clicked'); // 2
-// 	// $('.advantages__item').removeClass('active'); // 3
-// 	content.toggleClass('active'); // 4
-//  });
-
- $('.advantages__button').click(function() {
+$('.advantages__button').click(function() {
 	var id = $(this).attr('data-trigger'),
 		content = $('.advantages__item[data-trigger="'+ id +'"]');
-	$('.advantages__button').removeClass('clicked'); // 1
-	$(this).addClass('clicked'); // 2
-	$('.advantages__item').removeClass('active'); // 3
-	content.addClass('active'); // 4
+	// $('.advantages__button').removeClass('clicked'); // 1
+	$(this).toggleClass('clicked'); // 2
+	// $('.advantages__item').removeClass('active'); // 3
+	content.toggleClass('active'); // 4
  });
+
+//  $('.advantages__button').click(function() {
+// 	var id = $(this).attr('data-trigger'),
+// 		content = $('.advantages__item[data-trigger="'+ id +'"]');
+// 	$('.advantages__button').removeClass('clicked'); // 1
+// 	$(this).addClass('clicked'); // 2
+// 	$('.advantages__item').removeClass('active'); // 3
+// 	content.addClass('active'); // 4
+//  });
 
 
 $(document).ready(()=> {
@@ -25,7 +25,18 @@ $(document).ready(()=> {
 		slidesToScroll: 1,
 		appendArrows: $('.your-class-arrow'),
 		prevArrow: '<img class="slick-arrow prev" src="../i/icons/icon-prev.svg" alt="" " aria-hidden="true"></img>',
-		nextArrow: '<img class="slick-arrow next" src="../i/icons/icon-next.svg" alt="" " aria-hidden="true"></img>'
+		nextArrow: '<img class="slick-arrow next" src="../i/icons/icon-next.svg" alt="" " aria-hidden="true"></img>',
+		responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					infinite: true,
+					dots: true
+				}
+			},
+		]
 		
 	});
 
@@ -34,9 +45,21 @@ $(document).ready(()=> {
 		infinite: true,
 		slidesToShow: 4,
 		slidesToScroll: 1,
+
 		appendArrows: $('.slider-gallery__arrow'),
 		prevArrow: '<img class="slick-arrow prev-slider2" src="../i/icons/icon-prev.svg" alt="" " aria-hidden="true"></img>',
-		nextArrow: '<img class="slick-arrow next-slider2" src="../i/icons/icon-next.svg" alt="" " aria-hidden="true"></img>'
+		nextArrow: '<img class="slick-arrow next-slider2" src="../i/icons/icon-next.svg" alt="" " aria-hidden="true"></img>',
+		responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1,
+					infinite: true,
+					dots: true
+				}
+			},
+		]
 	});
 })
 

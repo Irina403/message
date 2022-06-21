@@ -5,6 +5,9 @@
 		background-image: url(../i/bg.png);
 		background-repeat: no-repeat;
 		background-size: cover;
+		@include bp($point_3){
+			background-position: center;
+		}
 		
 	}
 
@@ -39,12 +42,18 @@
 	&__row{
 		display: flex;
 		justify-content: space-between;
+		@include bp($point_3){
+			flex-direction: column;
+		}
 	}
 	&__img{
 		position: relative;
 	}
 	&__title{
 		width: 80%;
+		@include bp($point_3){
+			width: 100%;
+		}
 	}
 	&__text{
 		font-size: 2rem;
@@ -55,9 +64,15 @@
 	}
 	&__text-block{
 		width: 65%;
+		@include bp($point_3){
+			width: 100%;
+		}
 	}
 	&__col{
 		width: 60%;
+		@include bp($point_3){
+			width: 100%;
+		}
 	}
 	&__col:nth-child(2){
 		padding-top: 4.5rem;
@@ -77,18 +92,27 @@
 	width: 100%;
 }
 .services{
+	position: relative;
 	text-align: center;
 	margin-bottom: 10rem;
+
 	&__list{
+		position: relative;
 		margin-bottom: 8rem;
 		margin-top: 9rem;
 		width: 100%;
 		display: flex;
 		justify-content: space-between;
+		@include bp($point_3){
+			flex-wrap: wrap;
+		}
+		
 	}
+
 	&__item{
+		margin-right: 2rem;
 		width: 36.5rem;
-		height: 43.5rem;
+		// height: 43.5rem;
 		background: #FFFFFF;
 		box-shadow: 0px 27px 64px rgba(39, 0, 91, 0.07);
 		border-radius: 20px;
@@ -96,6 +120,16 @@
 	}
 }
 .services-card{
+	&__img{
+		// width: 36.5rem;
+		// width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+	&__img img{
+		width: 100%;
+	}
+
 	&__item-box{
 		padding-top: 1.5rem;
 		padding-left: 2rem;
@@ -136,6 +170,14 @@
 		align-items: center;
 		justify-content: space-between;
 	}
+	
+}
+.services::after{
+	position: absolute;
+	top: -14%;
+	right: -10%;
+	content: url(../i/bg-el.png);
+	z-index: -1;
 }
 .button{
 	display: flex;
@@ -169,11 +211,37 @@
 
 }
 .advantages{
+	margin-bottom: 20rem;
+	position: relative;
+	width: 100%;
+	&__block:nth-child(2){
+		margin-top: -5rem;
+		@include bp($point_3){
+			margin-top: 0rem;
+		}
+	}
 	&__title{
 		padding-bottom: 11.5rem;
+		text-align: center;
+	}
+
+	&__img{
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 13.7rem;
+		bottom: 0;
+		text-align: center;
+		@include bp($point_3){
+			display: none;
+		}
+	}
+	&__img img{
+		width: 100%;
 	}
 
 	&__item{
+		margin-bottom: 13rem;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -184,17 +252,57 @@
 		border-radius: 50px;
 		opacity: 0;
 		transition: all 0.2s;
+		@include bp($point_3){
+			margin-bottom:20rem;
+			flex-direction: column;
+		}
 	}
 	&__wrapp{
 		position: relative;
 		width: 33.5rem;
+		@include bp($point_3){
+			margin-top: -10rem;
+			z-index: 999;
+		}
 	}
+	&__wrapp-el-1{
+		margin-left: 18rem;
+		@include bp($point_3){
+			margin-left: 0rem;
+		}
+	}
+	&__wrapp-el-2{
+		margin-top: -5rem;
+		@include bp($point_3){
+			margin-top: 0rem;
+		}
+	}
+	&__wrapp-el-3{
+		margin-left: -20rem;
+		@include bp($point_3){
+			margin-left: 0rem;
+		}
+	}
+	&__wrapp-el-4{
+		margin-top: -10rem;
+		@include bp($point_3){
+			margin-top: 0rem;
+		}
+	}
+
+
 	&__text {
 		font-size: 2rem;
 		color:$black;
 		font-family: $font_3;
 		line-height: 24px;
-
+	}
+	&__container{
+		display: flex;
+		justify-content: space-between;
+		@include bp($point_3){
+			flex-direction: column;
+		}
 	}
 
 }
@@ -215,6 +323,16 @@
   cursor: pointer;
   z-index: 100;
   transition: 0.4s cubic-bezier(0.2, 0.6, 0.3, 1.1);
+	@include bp($point_3){
+		left: 50%;
+	}
+}
+.advantages__button-right{
+	left: 0%;
+	right: 100%;
+	@include bp($point_3){
+		left: 50%;
+	}
 }
 
 .advantages__button:after {
@@ -248,6 +366,7 @@
   width: 0;
 }
 .video{
+	width: 66rem;
 	border-radius: 20px;
   overflow: hidden;
   position: relative;
@@ -258,10 +377,18 @@
 
 .gallery-video {
 	padding-bottom: 10rem;
+	&__title{
+		text-align: center;
+		padding-bottom: 9rem;
+	}
 }
 .slick-slider>.slick-list{
 	padding:0 20% 0% 30% !important;
+	@include bp($point_3){
+		padding: 0% !important;
+	}
 }
+
 .slider-gallery{
 	&__item{
 		display: flex !important;
@@ -307,6 +434,8 @@
 	padding:0 0% 0% 0% !important;
 }
 .specialist-block{
+	margin-top: 10rem;
+	margin-bottom: 23.2rem;
 	&__slider{
 		position: relative;
 	}
@@ -358,38 +487,33 @@
 	margin-left: 52px;
 }
 
-// .slick-slide.slick-current.slick-active{
-// 	position: relative;
-// }
-// .slick-slide.slick-current.slick-active:after{
-// 	content: '';
-// 	top: 0;
-// 	position: absolute;
-// 	display: block;
-// 	width: 66rem;
-// 	height: 98%;
-// 	border-radius: 20px;
-// 	background: linear-gradient(0deg, rgba(132, 71, 213, 0.2), rgba(132, 71, 213, 0.2));
-// }
+.step-list-bg{
+	margin-top: 20rem;
+	position: relative;
+	&__img{
+		position: absolute;
+		top: -48rem;
+		z-index: -1;
+	}
+	&__img img{
+		width: 100%;
+	}
+
+}
 .step-list{
 	&__row{
 		padding-bottom: 22.4rem;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		@include bp($point_3){
+			flex-direction: column;
+		}
 	}
-	&__row::after{
-		position: absolute;
-		top: 0;
-		right: 0;
-		left: 0;
-		content: url('../i/list2.png');
-	
-	}
+
+
 	&__item{
 		position: relative;
-		// margin-top: -7%;
-		// width: 38rem;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -399,6 +523,9 @@
 	}
 	&__line{
 		margin-top: 10%;
+		@include bp($point_3){
+			display: none;
+		}
 	}
 	&__num{
 		display: flex;
@@ -407,7 +534,15 @@
 		margin-right: 3rem;
 	}
 	&__title{
+		position: relative;
 		text-align: center;
+	}
+	&__title::after{
+		content: url(../i/list2.png);
+		position: absolute;
+		top: 100%;
+		left: 50%;
+	
 	}
 	&__text{
 		width: 23.6rem;
@@ -455,21 +590,56 @@
   -webkit-text-fill-color: transparent;
 }
 .contact-form{
+	margin-bottom: 18.8rem;
 	background: linear-gradient(85.31deg, rgba(255, 255, 255, 0.62) -13.08%, rgba(178, 142, 225, 0) -9.09%, rgba(186, 167, 212, 0.24) 131.76%, rgba(208, 194, 225, 0.165321) 144.04%);
 	filter: drop-shadow(0px 27px 64px rgba(39, 0, 91, 0.07));
 	border-radius: 50px;
+	height: 42.3rem;
+	z-index: 9;
 	&__row {
+		position: relative;
 		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 100%;
+	}
+	&__row::after {
+		position: absolute;
+		top: -10%;
+		content: url(../i/list3.png);
+	}
+	&__title{
+		text-align: center;
+		margin-bottom: 1rem;
+	}
+	&__text {
+		text-align: center;
+		margin-bottom: 6rem;
+		font-size: 2rem;
+		font-family: $font_3;
+	}
+	&__col-right{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 	}
 	&__input{
+		margin-right: 1rem;
 		background: #FFFFFF;
 		box-shadow: 0px 27px 64px rgba(39, 0, 91, 0.07);
 		border-radius: 50px;	
 		border: none;
 		height: 6.2rem;
 		width: 25.2rem;
+		padding-left: 20px;
+		font-size: 1.8rem;
+		font-family: $font_3;
+		color:#8A8A8A ;
 	}
+
 	&__btn{
+		position: relative;
 		background: linear-gradient(91.32deg, #8546D7 0.59%, #B28EE1 101.83%);
 		box-shadow: 5px 8px 13px rgba(173, 134, 224, 0.45), inset 1px -1px 10px rgba(52, 0, 118, 0.24);
 		border-radius: 50px;
@@ -480,5 +650,84 @@
 		align-items: center;
 		justify-content: center;
 		font-family: $font_3;
+	}
+	&__btn-img{
+		top: -166%;
+		left: 0;
+		right: -50%;
+		bottom: 0;
+		position: absolute;
+		z-index: -1;
+	}
+	&__btn-img img{
+		width: 100%;
+	}
+	&__form {
+		display: flex;
+		margin-right: 14.3rem;
+	}
+	&__col-left{
+		position: relative;
+	}
+	&__img{
+		margin-top: 20%;
+}
+}
+.footer {
+	width: 100%;
+	background-image: url(../i/footer-bg.png);
+	background-size: cover;
+	background-position: center;
+	&__col{
+		justify-content: space-between;
+		width: 100%;
+		display: flex;
+		@include bp($point_3){
+			flex-direction: column;
+		}
+	}
+}
+.left-col {
+	display: flex;
+	&__item{
+		margin-bottom: 2.7rem;
+		display: flex;
+	}
+	&__box-contact{
+		margin-left: 6rem;
+	}
+	&__title{
+		margin-bottom: 5rem;
+	}
+	&__phone{
+		margin-left: 2rem;
+	}
+	&__social{
+		margin-top: 4.5rem;
+		margin-bottom: 8.4rem;
+		display: flex;
+		&-item {
+			margin-right: 2rem;
+	}
+}
+}
+.arkada-block {
+	font-family: $font_3;
+	font-size: 1.8rem;
+	color:$black;
+	&__logo{
+		display: flex;
+	}
+	&__img{
+		margin-left: 1rem;
+	}
+}
+.right-col{
+	width:50%;
+	height: 45rem;
+	margin-left: 10rem;
+	&__map{
+		max-width: 100%;
+    height: 100%;
 	}
 }
