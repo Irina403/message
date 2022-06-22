@@ -1,33 +1,57 @@
-nav.navigation
+nav.navigation.navbar
 	.section_in
-		.navigation__desk
-			ul.navigation__list 
-				li.navigation__item 
-					a(href="about_us") О нас
-				li.navigation__item 
-					a(href="services") Услуги
-				li.navigation__item 
-					a(href="studio") Студия
-				li.navigation__item 
-					a(href="sign-up") Как записаться
-				li.navigation__item 
-					a(href="specialists") Cпециалисты
-			.navigation__logo 
-				img(src="i/icons/logo.svg", alt="")
-			.contact-header 
-				.contact-header__list 
-					.contact-header
-						.contact-header__item  
-							.contact-header__icon 
-									img(src="i/icons/map.svg", alt="")
-							.contact-header__text Московский, Радужная ул, д. 1, этаж 1
-					.contact-header__item 
-						.contact-header__icon
+		.navigation__desk.navbar-container.container 
+				input(type="checkbox" name="" id="")
+				.hamburger-lines
+					span.line.line1
+					span.line.line2
+					span.line.line3
+				ul.navigation__list.menu-items.menu-toggle-open 
+					li.navigation__item 
+						a(href="#about_us") О нас
+					li.navigation__item 
+						a(href="#services") Услуги
+					li.navigation__item 
+						a(href="#studio") Студия
+					li.navigation__item 
+						a(href="#sign-up") Как записаться
+					li.navigation__item 
+						a(href="#specialists") Cпециалисты
+					.navigation-info-mobile__tel
+						.contact-header__item
 							img(src="i/icons/icon-phone.svg", alt="")
-						.contact-header__text
-							a.contact-header__tel(href="#") +7 000 000 00 00  
+							.contact-header__text
+								a.contact-header__tel(href="#") +7 000 000 00 00 
+						.contact-header__item
+							.contact-header__icon.contact-header__mobile-address
+								img(src="i/icons/map.svg", alt="")
+								.contact-header__text Московский, Радужная ул, д. 1, этаж 1
+				
+				
+				.navigation__logo 
+					img(src="i/icons/logo.svg", alt="")
+				.contact-header 
+					.contact-header__list 
+						.contact-header
+							.contact-header__item  
+								.contact-header__icon 
+										img(src="i/icons/map.svg", alt="")
+								.contact-header__text Московский, Радужная ул, д. 1, этаж 1
+						.contact-header__item 
+							.contact-header__icon
+								img(src="i/icons/icon-phone.svg", alt="")
+							.contact-header__text
+								a.contact-header__tel(href="#") +7 000 000 00 00 
+
+				.navigation-info-mobile 
+					.navigation-info-mobile__logo 
+						img(src="i/icons/logo.svg", alt="")
+
+					
+
+
 	
-	//- .container
+	//- .container-menu
 	//- 	input#toggle(type="checkbox")
 	//- 	label.toggle-container(for="toggle")
 	//- 		span.button.button-toggle
@@ -39,13 +63,13 @@ nav.navigation
 	//- 		a.nav-item(href="#") Dashboard
 
 
-		//- section.dummy-content
-		//- 	.circle
-		//- 	.text
-		//- 		span
-		//- 		span
-		//- 	.square-top
-		//- 	.square-behind
+	//- 	section.dummy-content
+	//- 		.circle
+	//- 		.text
+	//- 			span
+	//- 			span
+	//- 		.square-top
+	//- 		.square-behind
 
 
 	

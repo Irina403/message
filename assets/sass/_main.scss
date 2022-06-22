@@ -1,3 +1,6 @@
+.wrapper{
+	overflow-x: hidden;
+}
 .main-banner{
 	position: relative;
 	&__img{
@@ -5,15 +8,13 @@
 		background-image: url(../i/bg.png);
 		background-repeat: no-repeat;
 		background-size: cover;
-		@include bp($point_3){
-			background-position: center;
-		}
 		
 	}
 
 	&__textBlock{
 		position: absolute;
 		top: 25%;
+
 	
 	}
 	&__title{
@@ -25,12 +26,22 @@
 		font-size: 2rem;
 	}
 	&__button{
+		background: linear-gradient(91.32deg, #8546D7 0.59%, #B28EE1 101.83%);
+		background-size: 200% 100%;
+		background-position: 100% 0;
 		width: 26.9rem;
 		height: 7.2rem;
+		transition: background-position .5s;
+		border: 0;
+		color: white;
+		font-size: 2rem;
 		border-radius: 5rem;
-		background: linear-gradient(91.32deg, #8546D7 0.59%, #B28EE1 101.83%);
+		cursor: pointer;
 		box-shadow: 5px 8px 13px rgba(173, 134, 224, 0.45), inset 1px -1px 10px rgba(52, 0, 118, 0.24);
-		color: #fff;
+
+	}
+	&__button:hover{
+		background-position: 0 0;
 	}
 }
 .button-text{
@@ -58,6 +69,9 @@
 	&__text{
 		font-size: 2rem;
 		font-family: $font_3;
+		@include bp($point_3){
+			margin-top: 2rem;
+		}
 	}
 	&__text p{
 		padding-bottom: 2rem;
@@ -77,6 +91,9 @@
 	&__col:nth-child(2){
 		padding-top: 4.5rem;
 		padding-left: 10rem;
+		@include bp($point_3){
+			padding-left: 0rem;
+		}
 	}
 	&-list{
 		position: relative;
@@ -86,10 +103,28 @@
 		content: url(../i/list.png);
 		position: absolute;
 		right: 23%;
+		@include bp($point_3){
+			top: 44px;
+		}
+		@include bp($point_5){
+			top: 120px;
+		}
+	}
+	}
+
+.signUp-massage__img{
+	@include bp($point_3){
+		margin: 0 auto;
 	}
 }
 .signUp-massage__img img{
 	width: 100%;
+	@include bp($point_3){
+		width: 70%;
+	}
+	@include bp($point_5){
+		width: 100%;
+	}
 }
 .services{
 	position: relative;
@@ -105,17 +140,33 @@
 		justify-content: space-between;
 		@include bp($point_3){
 			flex-wrap: wrap;
+			margin-bottom: 0rem;
+			margin-top: 0rem;
+		}
+		@include bp($point_5){
+			justify-content: center;
 		}
 		
+	}
+	&__title{
+		@include bp($point_3){
+			margin-bottom: 10rem;
+		}
+		@include bp($point_5){
+		margin-top:3rem;
+		}
 	}
 
 	&__item{
 		margin-right: 2rem;
 		width: 36.5rem;
-		// height: 43.5rem;
 		background: #FFFFFF;
 		box-shadow: 0px 27px 64px rgba(39, 0, 91, 0.07);
 		border-radius: 20px;
+		@include bp($point_3){
+			margin-right: 0rem;
+			margin-bottom: 2rem;
+		}
 
 	}
 }
@@ -144,6 +195,7 @@
 		font-size: 2.2rem;
 		font-family: $font_2;
 		text-align: left;
+	
 		
 	}
 	&__text{
@@ -184,18 +236,24 @@
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
+
 	&__link{
 		color: #fff;
 		font-size: 1.8rem;
 		font-family: $font_3;
 	}
 }
+
 .button-collaps {
 	margin: auto;
 	width: 29.4rem;
 	height: 7.2rem;
 	border-radius: 5rem;
 	border: 1px solid #8546D7;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
 	&__text{
 		background: linear-gradient(297.31deg, #8546D7 -2.19%, #B28EE1 104.59%);
 		-webkit-background-clip: text;
@@ -214,6 +272,17 @@
 	margin-bottom: 20rem;
 	position: relative;
 	width: 100%;
+	@include bp($point_3){
+		margin-bottom: 0rem;
+		}
+	&__block{
+		@include bp($point_3){
+		margin-left: 10rem;
+		}
+		@include bp($point_5){
+			margin-left: 4rem;
+			}
+	}
 	&__block:nth-child(2){
 		margin-top: -5rem;
 		@include bp($point_3){
@@ -223,6 +292,12 @@
 	&__title{
 		padding-bottom: 11.5rem;
 		text-align: center;
+		@include bp($point_3){
+			padding-bottom: 19.5rem;
+		}
+		@include bp($point_5){
+			padding-bottom: 10rem;
+		}
 	}
 
 	&__img{
@@ -253,9 +328,16 @@
 		opacity: 0;
 		transition: all 0.2s;
 		@include bp($point_3){
-			margin-bottom:20rem;
+			margin-bottom:10rem;
 			flex-direction: column;
 		}
+		@include bp($point_5){
+			margin-bottom: 0rem;
+			}
+		// @include bp($point_3){
+		// 	margin-bottom:20rem;
+		// 	flex-direction: column;
+		// }
 	}
 	&__wrapp{
 		position: relative;
@@ -275,6 +357,10 @@
 		margin-top: -5rem;
 		@include bp($point_3){
 			margin-top: 0rem;
+			margin-bottom: 20rem;
+		}
+		@include bp($point_5){
+			margin-bottom: 10rem;
 		}
 	}
 	&__wrapp-el-3{
@@ -323,8 +409,9 @@
   cursor: pointer;
   z-index: 100;
   transition: 0.4s cubic-bezier(0.2, 0.6, 0.3, 1.1);
+	
 	@include bp($point_3){
-		left: 50%;
+		left: 0%;
 	}
 }
 .advantages__button-right{
@@ -332,6 +419,9 @@
 	right: 100%;
 	@include bp($point_3){
 		left: 50%;
+	}
+	@include bp($point_3){
+		left: 0%;
 	}
 }
 
@@ -370,6 +460,14 @@
 	border-radius: 20px;
   overflow: hidden;
   position: relative;
+	@include bp($point_3){
+		left: 50%;
+		transform: translate(-50%,0%);
+	}
+	@include bp($point_5){
+		left: 0%;
+		transform: translate(0%,0%);
+	}
 }
 .gallery-list__item img{
 	max-width: 66rem;
@@ -394,6 +492,7 @@
 		display: flex !important;
 		flex-direction: column;
 		align-items: center;
+		cursor: pointer;
 	}
 
 	&__name{
@@ -415,27 +514,54 @@
 		justify-content: space-between;
 		cursor: pointer;
 	}
-	&__img{
+}
+	.slider-gallery__img  {
 		margin-bottom: 3.1rem;
 		position: relative;
 	}
-	// &__img:hover{
-	// 	// content: '';
-	// 	top:0;
-	// 	position: absolute;
-	// 	width: 100%;
-	// 	height: 100%;
-	// 	background: linear-gradient(0deg, rgba(132, 71, 213, 0.3), rgba(132, 71, 213, 0.3));
-	// 	border-radius: 100%;
+	.slider-gallery__img:before {
+		content: '';
+		opacity: 0;
+		transition: opacity 0.5s ease;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		border-radius: 100%;
+		z-index: 2;
+		background: linear-gradient(0deg, rgba(132, 71, 213, 0.3), rgba(132, 71, 213, 0.3));
+	}
+	.slider-gallery__img:hover:before {
+		opacity: 1;
+	}
+	.btn-more-details{
+		opacity: 0;
+		transition: opacity 0.5s ease;
+		position: relative;
+		cursor: pointer;
+		z-index: 3;
+		position: absolute;
+		top: 45%;
+		left: 50%;
+		transform: translate(-50%,0%);
+		font-size: 2rem;
+		font-family: $font_3;
+		color: #fff;
+	}
 
-	// }
-}
+	.slider-gallery__img:hover .btn-more-details {
+		opacity: 1;
+	}
+
 .slider-gallery>.slick-list{
 	padding:0 0% 0% 0% !important;
 }
 .specialist-block{
 	margin-top: 10rem;
 	margin-bottom: 23.2rem;
+	@include bp($point_3){
+		margin-top: 5rem;
+	}
 	&__slider{
 		position: relative;
 	}
@@ -447,6 +573,9 @@
 }
 .slider-gallery__arrow{
 	position: absolute;
+	@include bp($point_3){
+		top: 100%;
+	}
 }
 
 // .video-is-playing{
@@ -470,6 +599,13 @@
 	display: flex;
 	justify-content: space-around;
 	cursor: pointer;
+	@include bp($point_3){
+		margin-top: 0%;
+	}
+	@include bp($point_5){
+		justify-content: center;
+		width: 100%;
+	}
 }
 .arrow-gallery {
 	position: relative;
@@ -482,14 +618,23 @@
 }
 .prev{
 	margin-left: 48px;
+	@include bp($point_5){
+		margin-left: 0px;
+	}
 }
 .next{
 	margin-left: 52px;
+	@include bp($point_5){
+		margin-left: 0px;
+	}
 }
 
 .step-list-bg{
 	margin-top: 20rem;
 	position: relative;
+	@include bp($point_3){
+		margin-top: 0rem;
+	}
 	&__img{
 		position: absolute;
 		top: -48rem;
@@ -510,16 +655,26 @@
 			flex-direction: column;
 		}
 	}
-
-
 	&__item{
 		position: relative;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		@include bp($point_3){
+			margin-top: 11%;
+		}
+		@include bp($point_6){
+			margin-top: 20%;
+		}
 	}
 	&__item-style {
 		margin-top: 20%;
+		@include bp($point_3){
+			margin-top: 30%;
+		}
+		@include bp($point_5){
+			margin-top: 50%;
+		}
 	}
 	&__line{
 		margin-top: 10%;
@@ -567,6 +722,13 @@
 	&__img{
 		position: absolute;
 		right: 0;
+		@include bp($point_3){
+			text-align: center;
+		}
+		@include bp($point_5){
+			right: 0;
+			left: 0;
+		}
 	}
 	&__img-col3{
 		top: 55%;
@@ -575,8 +737,8 @@
 	&__icon{
 		margin-bottom: 1.9rem;
 	}
-
 }
+
 
 .num-step{
 	font-size: 2rem;
@@ -594,19 +756,37 @@
 	background: linear-gradient(85.31deg, rgba(255, 255, 255, 0.62) -13.08%, rgba(178, 142, 225, 0) -9.09%, rgba(186, 167, 212, 0.24) 131.76%, rgba(208, 194, 225, 0.165321) 144.04%);
 	filter: drop-shadow(0px 27px 64px rgba(39, 0, 91, 0.07));
 	border-radius: 50px;
-	height: 42.3rem;
+	// height: 42.3rem;
 	z-index: 9;
+	@include bp($point_3){
+		margin-bottom: 2rem;
+	}
+	@include bp($point_6){
+		margin-bottom:12rem;
+	}
+	&__form{
+		@include bp($point_5){
+			flex-direction: column;
+		}
+	}
 	&__row {
 		position: relative;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		height: 100%;
+		@include bp($point_3){
+			justify-content: center;
+		}
+	
 	}
 	&__row::after {
 		position: absolute;
 		top: -10%;
 		content: url(../i/list3.png);
+		@include bp($point_3){
+			top: -30%;
+		}
 	}
 	&__title{
 		text-align: center;
@@ -617,12 +797,18 @@
 		margin-bottom: 6rem;
 		font-size: 2rem;
 		font-family: $font_3;
+		@include bp($point_5){
+			margin-bottom: 0rem;
+		}
 	}
 	&__col-right{
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		@include bp($point_5){
+			padding-bottom: 3rem;
+		}
 	}
 	&__input{
 		margin-right: 1rem;
@@ -636,6 +822,9 @@
 		font-size: 1.8rem;
 		font-family: $font_3;
 		color:#8A8A8A ;
+		@include bp($point_5){
+			margin-bottom: 2rem;
+		}
 	}
 
 	&__btn{
@@ -650,6 +839,13 @@
 		align-items: center;
 		justify-content: center;
 		font-family: $font_3;
+		background-size: 200% 100%;
+		background-position: 100% 0;
+		transition: background-position .5s;
+		cursor: pointer;
+	}
+	&__btn:hover{
+		background-position: 0 0;
 	}
 	&__btn-img{
 		top: -166%;
@@ -665,9 +861,15 @@
 	&__form {
 		display: flex;
 		margin-right: 14.3rem;
+		@include bp($point_3){
+			margin-right: 0rem;
+		}
 	}
 	&__col-left{
 		position: relative;
+		@include bp($point_5){
+			display: none;
+		}
 	}
 	&__img{
 		margin-top: 20%;
@@ -689,12 +891,29 @@
 }
 .left-col {
 	display: flex;
+	@include bp($point_3){
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	&__logo{
+		@include bp($point_3){
+			margin-bottom: 2rem;
+		}
+	}
 	&__item{
 		margin-bottom: 2.7rem;
 		display: flex;
+		@include bp($point_5){
+			align-items: center;
+			justify-content: center;
+		}
 	}
 	&__box-contact{
 		margin-left: 6rem;
+		@include bp($point_5){
+			margin-left: 0rem;
+		}
 	}
 	&__title{
 		margin-bottom: 5rem;
@@ -709,12 +928,25 @@
 		&-item {
 			margin-right: 2rem;
 	}
+	@include bp($point_5){
+		align-items: center;
+		justify-content: center;
+	}
 }
 }
 .arkada-block {
 	font-family: $font_3;
 	font-size: 1.8rem;
 	color:$black;
+	@include bp($point_5){
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	@include bp($point_3){
+		margin-bottom: 2rem;
+	}
 	&__logo{
 		display: flex;
 	}
@@ -726,8 +958,23 @@
 	width:50%;
 	height: 45rem;
 	margin-left: 10rem;
+	@include bp($point_3){
+		margin-left: 0rem;
+		width: 100%;
+		margin: 0 auto;
+		margin-bottom: 3rem;
+	}
 	&__map{
 		max-width: 100%;
     height: 100%;
 	}
 }
+
+// .collapse{
+// 	display: none;
+// 	transition: height .25s ease;
+// } 
+// .collapse.active{
+// 	display: flex;
+// 	// transition: all 0.2s;
+// }

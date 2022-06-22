@@ -16,7 +16,7 @@ block content_block
 
 
 	.section_in
-		.signUp-massage
+		.signUp-massage#about_us
 			.signUp-massage__row 
 				.signUp-massage__col 
 					.signUp-massage__img 
@@ -33,7 +33,7 @@ block content_block
 			.services__row 
 				.services__title.titleBlock Заботимся о вашем <span> здоровье </span>
 
-				ul.services__list 
+				ul.services__list#services 
 					li.services__item.services-card 
 						.services-card__img 
 							img(src="../i/services1.png", alt="")
@@ -64,7 +64,7 @@ block content_block
 							.services-card__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
 							.services-card__footer 
 								.services-card__price от 3000₽
-								.services-card__button.button 	
+								.services-card__button.button(data-toggle="modal" data-target="#modal-1") 	
 									.button__link Подробнее
 
 					li.services__item.services-card 
@@ -75,7 +75,7 @@ block content_block
 							.services-card__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
 							.services-card__footer 
 								.services-card__price от 3000₽
-								.services-card__button.button 	
+								.services-card__button.button(data-toggle="modal" data-target="#modal-1") 	
 									.button__link Подробнее
 				
 				ul.services__list 
@@ -109,7 +109,7 @@ block content_block
 							.services-card__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
 							.services-card__footer 
 								.services-card__price от 3000₽
-								.services-card__button.button 	
+								.services-card__button.button(data-toggle="modal" data-target="#modal-1") 	
 									.button__link Подробнее
 
 					li.services__item.services-card 
@@ -120,10 +120,56 @@ block content_block
 							.services-card__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
 							.services-card__footer 
 								.services-card__price от 3000₽
-								.services-card__button.button 	
+								.services-card__button.button(data-toggle="modal" data-target="#modal-1") 	
 									.button__link Подробнее
 
-				.services__item.button-collaps.button 
+				ul.services__list.collapse 
+					li.services__item.services-card 
+						.services-card__img 
+							img(src="../i/services5.png", alt="")
+						.services-card__item-box 
+							.services-card__title Массаж для беременных1
+							.services-card__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+							.services-card__footer 
+								.services-card__price от 3000₽
+								.services-card__button.button(data-toggle="modal" data-target="#modal-1")
+									.button__link Подробнее
+					
+					li.services__item.services-card 
+						.services-card__img 
+							img(src="../i/services6.png", alt="") 
+						.services-card__item-box 
+							.services-card__title Детский массаж2
+							.services-card__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+							.services-card__footer 
+								.services-card__price от 3000₽
+								.services-card__button.button(data-toggle="modal" data-target="#modal-2") 	
+									.button__link Подробнее
+
+					li.services__item.services-card 
+						.services-card__img 
+							img(src="../i/services7.png", alt="")
+						.services-card__item-box  
+							.services-card__title Дети от 7 до 14 лет3
+							.services-card__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+							.services-card__footer 
+								.services-card__price от 3000₽
+								.services-card__button.button(data-toggle="modal" data-target="#modal-1") 	
+									.button__link Подробнее
+
+					li.services__item.services-card 
+						.services-card__img 
+							img(src="../i/services8.png", alt="")
+						.services-card__item-box  
+							.services-card__title Лечебный массаж4
+							.services-card__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+							.services-card__footer 
+								.services-card__price от 3000₽
+								.services-card__button.button(data-toggle="modal" data-target="#modal-1") 	
+									.button__link Подробнее
+					
+
+				.services__item.button-collaps#button-collapse 
 					.button-collaps__text Показать больше
 					
 
@@ -158,7 +204,7 @@ block content_block
 							.advantages__button.advantages__button-right(data-trigger="advant4")
 
 	.section_in
-		.gallery-video 
+		.gallery-video#studio 
 			.gallery-video__row 
 				.gallery-video__title.titleBlock Атмофера нашей <span> студии </span>
 
@@ -187,7 +233,7 @@ block content_block
 		.step-list-bg__img 
 			img(src="i/bg-wave2.png", alt="")
 	.section_in
-		.step-list
+		.step-list#sign-up
 			.step-list__title.titleBlock Как записаться на <span> массаж? </span>
 
 			.step-list__row
@@ -237,37 +283,44 @@ block content_block
 					
 	.section_in
 		.specialist-block
-			.specialist-block__title.titleBlock Наши <span> специалисты </span>
+			.specialist-block__title.titleBlock#specialists Наши <span> специалисты </span>
 
 			.specialist-block__slider 
 				ul.slider-gallery__list.slider-gallery 
 					li.slider-gallery__item 
-						.slider-gallery__img 
+						.slider-gallery__img(data-toggle="modal" data-target="#specialist1")  
 							img(src="i/spec1.png", alt="")
+							.slider-gallery__btn.btn-more-details Подробнее
 						.slider-gallery__name Мария
 						.slider-gallery__description квалифицированный массажист<br>стаж работы 5 лет
+						
+						
 
-					li.slider-gallery__item 
-						.slider-gallery__img 
+					li.slider-gallery__item
+						.slider-gallery__img(data-toggle="modal" data-target="#specialist2") 
 							img(src="i/spec1.png", alt="")
+							.slider-gallery__btn.btn-more-details Подробнее 
 						.slider-gallery__name Мария
 						.slider-gallery__description квалифицированный массажист<br>стаж работы 5 лет
 					
 					li.slider-gallery__item 
-						.slider-gallery__img 
+						.slider-gallery__img(data-toggle="modal" data-target="#specialist2")  
 							img(src="i/spec1.png", alt="")
+							.slider-gallery__btn.btn-more-details Подробнее
 						.slider-gallery__name Мария
 						.slider-gallery__description квалифицированный массажист<br>стаж работы 5 лет
 
 					li.slider-gallery__item 
-						.slider-gallery__img 
+						.slider-gallery__img(data-toggle="modal" data-target="#specialist2")  
 							img(src="i/spec1.png", alt="")
+							.slider-gallery__btn.btn-more-details Подробнее
 						.slider-gallery__name Мария
 						.slider-gallery__description квалифицированный массажист<br>стаж работы 5 лет
 
 					li.slider-gallery__item 
-						.slider-gallery__img 
+						.slider-gallery__img(data-toggle="modal" data-target="#specialist2")  
 							img(src="i/spec1.png", alt="")
+							.slider-gallery__btn.btn-more-details Подробнее
 						.slider-gallery__name Мария
 						.slider-gallery__description квалифицированный массажист<br>стаж работы 5 лет
 				
